@@ -1,10 +1,9 @@
-import './App.css';
-
 function App() {
-  return (
-    <div className="App" style={{padding: "30px"}}>
-    </div>
-  );
+    return (
+        <div className="App" style={{ padding: '30px' }}>
+            Helelllelel
+        </div>
+    );
 }
 
 export default App;

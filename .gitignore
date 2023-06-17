@@ -18,6 +18,12 @@
 .env.test.local
 .env.production.local
 
+# vs code
+.vscode
+
+# prettier options notes
+.prettier-define
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
