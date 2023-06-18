@@ -3,6 +3,9 @@
 
 :root {
     --primary: #fe2c55;
+    --2side-padding: 16px;
+    --text-color: #8f8f8f;
+    --black: #000;
 
     // Default layout
     --header-height: 60px;
@@ -23,4 +26,10 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
 }
