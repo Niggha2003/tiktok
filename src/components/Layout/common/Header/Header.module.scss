@@ -12,6 +12,11 @@
     cursor: pointer;
 }
 
+.search,
+.search-results {
+    width: 500px;
+}
+
 .search {
     --icons-color: #b5b5b5;
     --search-btn-width: 52px;
@@ -19,7 +24,6 @@
     --up-down-space: 7px;
 
     display: flex;
-    width: 500px;
     height: var(--search-height);
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: 92px;
@@ -75,4 +79,13 @@
     background-color: transparent;
     color: var(--icons-color);
     cursor: pointer;
+}
+
+.search-account-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
 }
