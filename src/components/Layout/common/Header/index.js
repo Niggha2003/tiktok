@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
 import Tippy from '@tippyjs/react/headless';
 
@@ -9,6 +9,8 @@ import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
+import Menu from '~/components/Proper/Menu';
+import menuList from './menuList';
 
 const cx = classNames.bind(styles);
 
@@ -47,6 +49,11 @@ function Header() {
                 <Button primary color="white" bold>
                     Log in
                 </Button>
+                <Menu menuList={menuList}>
+                    <button className={cx('option-menu-btn')}>
+                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </button>
+                </Menu>
             </div>
         </header>
     );
