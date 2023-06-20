@@ -2,9 +2,9 @@
     display: block;
     border-radius: 4px;
     min-height: 24px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 24px;
-    min-width: 100px;
+    width: 120px;
     outline: 1px solid transparent;
     padding: 6px 8px;
     cursor: pointer;
@@ -28,6 +28,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid;
     border-color: rgba(22, 24, 35, 0.12);
+    font-size: 1.4rem;
 
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
@@ -37,6 +38,7 @@
 
 .primary {
     background-color: var(--primary);
+    font-size: 1.4rem;
 
     &:hover {
         background-color: rgba(239, 41, 80, 1);
@@ -45,6 +47,7 @@
 
 .outline {
     outline-color: var(--primary);
+    font-size: 1.4rem;
 
     &:hover {
         background-color: rgba(255, 243, 245, 1);
@@ -52,6 +55,9 @@
 }
 
 .text {
+    font-size: 1.8rem;
+    font-weight: 600;
+
     &:hover {
         text-decoration: underline;
     }

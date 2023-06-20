@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, menuList }) {
+function Menu({ children, menuList, light }) {
     const [history, setHistory] = useState([{ data: menuList }]);
     const currentMenu = history[history.length - 1];
 
@@ -19,6 +19,7 @@ function Menu({ children, menuList }) {
                 <MenuItem
                     key={index}
                     data={item}
+                    light={light}
                     onClick={() => {
                         const isParent = !!item.children;
                         if (isParent) {
@@ -36,8 +37,8 @@ function Menu({ children, menuList }) {
     return (
         <Tippy
             interactive
-            visible
             placement="bottom-end"
+            offset={[15, 12]}
             delay={[100, 700]}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -47,6 +48,9 @@ function Menu({ children, menuList }) {
                     </Wrapper>
                 </div>
             )}
+            onHide={() => {
+                setHistory((prev) => prev.slice(0, 1));
+            }}
         >
             {children}
         </Tippy>

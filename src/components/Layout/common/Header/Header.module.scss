@@ -101,4 +101,16 @@
     font-size: 2rem;
     cursor: pointer;
     background-color: transparent;
+    margin-right: 16px;
+}
+
+// user css
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 16px;
+    margin-left: 16px;
 }

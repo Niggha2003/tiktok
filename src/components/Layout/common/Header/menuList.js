@@ -1,5 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleQuestion, faEarthAsia, faKeyboard } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBookmark,
+    faGear,
+    faCircleQuestion,
+    faCoins,
+    faEarthAsia,
+    faKeyboard,
+    faUser,
+    faSignOut,
+} from '@fortawesome/free-solid-svg-icons';
 
 const menuList = [
     {
@@ -30,4 +39,29 @@ const menuList = [
     },
 ];
 
-export default menuList;
+const menuUserList = [
+    {
+        icon: <FontAwesomeIcon icon={faUser} />,
+        title: 'View profile',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faBookmark} />,
+        title: 'Favorites',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCoins} />,
+        title: 'Get coins',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGear} />,
+        title: 'Settings',
+    },
+    ...menuList,
+    {
+        icon: <FontAwesomeIcon icon={faSignOut} />,
+        title: 'Log out',
+        separate: true,
+    },
+];
+
+export { menuList, menuUserList };
