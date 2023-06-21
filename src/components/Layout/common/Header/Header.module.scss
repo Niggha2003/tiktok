@@ -93,6 +93,7 @@
 // options css
 .options {
     display: flex;
+    align-items: center;
 }
 
 .option-menu-btn {
@@ -113,4 +114,10 @@
     cursor: pointer;
     margin-right: 16px;
     margin-left: 16px;
+    margin-bottom: 2px;
+}
+
+// styles css
+.margin-top {
+    margin-top: 5px;
 }

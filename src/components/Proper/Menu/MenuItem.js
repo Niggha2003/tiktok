@@ -11,9 +11,6 @@ function MenuItem({ data, light, onClick, ...passProps }) {
         onClick,
         ...passProps,
     };
-
-    console.log(light);
-
     if (data.to) {
         Comp = Link;
         props.to = data.to;

@@ -19,7 +19,9 @@ import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Proper/Menu';
+import Image from '~/components/Image';
 import { menuList, menuUserList } from './menuList';
+import { InboxIcon, MessageIcon } from '~/assets/icons';
 
 const cx = classNames.bind(styles);
 
@@ -31,6 +33,7 @@ function Header() {
             <img className={cx('logo')} src={images.logo} alt="tik-tok" />
             <HeadlessTippy
                 interactive
+                trigger="click"
                 render={(attrs) => (
                     <div className={cx('search-results')} tabIndex="-1" {...attrs}>
                         <PropWrapper>
@@ -64,14 +67,14 @@ function Header() {
                         <Tippy content="Messages" delay={[0, 200]} offset={[0, 5]}>
                             <div>
                                 <Button color="#fe2c2cb8" width="40px">
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                    <MessageIcon classnames={cx('margin-top')} width="26px" height="26px" />
                                 </Button>
                             </div>
                         </Tippy>
                         <Tippy content="Inbox" delay={[0, 200]} offset={[0, 5]}>
                             <div>
                                 <Button color="#fe2c2cb8" width="40px">
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <InboxIcon classnames={cx('margin-top')} />
                                 </Button>
                             </div>
                         </Tippy>
@@ -88,7 +91,7 @@ function Header() {
                 {currentUser ? (
                     <>
                         <Menu menuList={menuUserList} light="true">
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/6b189e63582aa929d0d2a48572c1f6e3~c5_100x100.jpeg?x-expires=1687435200&x-signature=bafS38xrudX6a6AGvVj3VBDMEfM%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyễn Văn A"
