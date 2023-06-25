@@ -14,6 +14,8 @@ import Search from '~/components/Search';
 import images from '~/assets/images';
 import { menuList, menuUserList } from './menuList';
 import { InboxIcon, MessageIcon } from '~/assets/icons';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -22,7 +24,9 @@ function Header() {
 
     return (
         <header className={cx('wrapper')}>
-            <img className={cx('logo')} src={images.logo} alt="tik-tok" />
+            <Link to={config.routes.home} className={cx('logo')}>
+                <img src={images.logo} alt="tik-tok" />
+            </Link>
             <Search></Search>
             <div className={cx('options')}>
                 {currentUser ? (

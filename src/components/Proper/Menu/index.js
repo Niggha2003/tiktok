@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, menuList, light }) {
+function Menu({ children, menuList, hideOnClick = false, light }) {
     const [history, setHistory] = useState([{ data: menuList }]);
     const currentMenu = history[history.length - 1];
 
@@ -40,11 +40,12 @@ function Menu({ children, menuList, light }) {
             placement="bottom-end"
             offset={[15, 12]}
             delay={[100, 700]}
+            hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <Wrapper>
                         {history.length > 1 && <MenuHeader header={currentMenu.header} onBack={handleMenuBack} />}
-                        {renderItems()}
+                        <div className={cx('menu-items')}>{renderItems()}</div>
                     </Wrapper>
                 </div>
             )}

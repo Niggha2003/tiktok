@@ -24,6 +24,9 @@
 # prettier options notes
 .prettier-define
 
+# env file
+.env.development
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

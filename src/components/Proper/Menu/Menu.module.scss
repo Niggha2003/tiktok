@@ -2,9 +2,13 @@
     width: 220px;
 }
 
+.menu-items {
+    overflow-y: auto;
+}
+
 .menu-item {
     display: flex;
-    padding: 7px 8px 7px 16px;
+    padding: 8px 8px 8px 16px;
     align-items: center;
 
     &:hover {

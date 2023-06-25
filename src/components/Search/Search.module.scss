@@ -36,12 +36,12 @@
         background-color: var(--icons-color);
     }
 
-    &.active,
+    &:focus-within,
     &:hover {
         border-color: var(--icons-color);
     }
 
-    &.is-searching .search-btn {
+    &.is-typing .search-btn {
         color: var(--black);
     }
 
