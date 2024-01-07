@@ -23,6 +23,8 @@ function Search() {
 
     const debounce = useDebounce(searchValue, 600);
 
+    console.log('render');
+
     useEffect(() => {
         if (!debounce.trim()) {
             setSearchResult([]);
